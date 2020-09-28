@@ -7,23 +7,35 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EA61137D25209FD900E4BEAA /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA61137C25209FD900E4BEAA /* Constants.swift */; };
+		EA6113862520A3C900E4BEAA /* Video.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA6113852520A3C900E4BEAA /* Video.swift */; };
+		EA6113892520A4C900E4BEAA /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA6113882520A4C900E4BEAA /* NetworkManager.swift */; };
+		EA61138C2520A8B300E4BEAA /* DataFetcherManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA61138B2520A8B300E4BEAA /* DataFetcherManager.swift */; };
+		EA6113912520B01300E4BEAA /* APIKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA6113902520B01300E4BEAA /* APIKey.swift */; };
 		EAAA5652251FC09400260081 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAAA5651251FC09400260081 /* AppDelegate.swift */; };
 		EAAA5654251FC09400260081 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAAA5653251FC09400260081 /* SceneDelegate.swift */; };
-		EAAA5656251FC09400260081 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAAA5655251FC09400260081 /* ViewController.swift */; };
+		EAAA5656251FC09400260081 /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAAA5655251FC09400260081 /* FeedViewController.swift */; };
 		EAAA5659251FC09400260081 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EAAA5657251FC09400260081 /* Main.storyboard */; };
 		EAAA565B251FC09600260081 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EAAA565A251FC09600260081 /* Assets.xcassets */; };
 		EAAA565E251FC09600260081 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EAAA565C251FC09600260081 /* LaunchScreen.storyboard */; };
+		EAFF15672521F63E000CFED3 /* VideosResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAFF15662521F63E000CFED3 /* VideosResponse.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		EA61137C25209FD900E4BEAA /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		EA6113852520A3C900E4BEAA /* Video.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Video.swift; sourceTree = "<group>"; };
+		EA6113882520A4C900E4BEAA /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		EA61138B2520A8B300E4BEAA /* DataFetcherManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataFetcherManager.swift; sourceTree = "<group>"; };
+		EA6113902520B01300E4BEAA /* APIKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIKey.swift; sourceTree = "<group>"; };
 		EAAA564E251FC09400260081 /* YouTubeApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YouTubeApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EAAA5651251FC09400260081 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EAAA5653251FC09400260081 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		EAAA5655251FC09400260081 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		EAAA5655251FC09400260081 /* FeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
 		EAAA5658251FC09400260081 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		EAAA565A251FC09600260081 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EAAA565D251FC09600260081 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EAAA565F251FC09600260081 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EAFF15662521F63E000CFED3 /* VideosResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideosResponse.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -37,6 +49,52 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		EA61137F2520A37E00E4BEAA /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				EAAA5651251FC09400260081 /* AppDelegate.swift */,
+				EAAA5653251FC09400260081 /* SceneDelegate.swift */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		EA6113812520A39000E4BEAA /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				EA61137C25209FD900E4BEAA /* Constants.swift */,
+				EA6113902520B01300E4BEAA /* APIKey.swift */,
+				EAAA565A251FC09600260081 /* Assets.xcassets */,
+				EAAA565C251FC09600260081 /* LaunchScreen.storyboard */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		EA6113832520A39E00E4BEAA /* Configuration */ = {
+			isa = PBXGroup;
+			children = (
+				EAAA565F251FC09600260081 /* Info.plist */,
+			);
+			path = Configuration;
+			sourceTree = "<group>";
+		};
+		EA6113842520A3BD00E4BEAA /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				EA6113852520A3C900E4BEAA /* Video.swift */,
+				EAFF15662521F63E000CFED3 /* VideosResponse.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		EA61138E2520A9BB00E4BEAA /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				EA6113882520A4C900E4BEAA /* NetworkManager.swift */,
+				EA61138B2520A8B300E4BEAA /* DataFetcherManager.swift */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
 		EAAA5645251FC09300260081 = {
 			isa = PBXGroup;
 			children = (
@@ -56,13 +114,13 @@
 		EAAA5650251FC09400260081 /* YouTubeApp */ = {
 			isa = PBXGroup;
 			children = (
-				EAAA5651251FC09400260081 /* AppDelegate.swift */,
-				EAAA5653251FC09400260081 /* SceneDelegate.swift */,
-				EAAA5655251FC09400260081 /* ViewController.swift */,
+				EA6113842520A3BD00E4BEAA /* Models */,
+				EAAA5655251FC09400260081 /* FeedViewController.swift */,
+				EA61138E2520A9BB00E4BEAA /* Managers */,
+				EA6113812520A39000E4BEAA /* Resources */,
 				EAAA5657251FC09400260081 /* Main.storyboard */,
-				EAAA565A251FC09600260081 /* Assets.xcassets */,
-				EAAA565C251FC09600260081 /* LaunchScreen.storyboard */,
-				EAAA565F251FC09600260081 /* Info.plist */,
+				EA61137F2520A37E00E4BEAA /* Application */,
+				EA6113832520A39E00E4BEAA /* Configuration */,
 			);
 			path = YouTubeApp;
 			sourceTree = "<group>";
@@ -94,7 +152,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1170;
-				LastUpgradeCheck = 1170;
+				LastUpgradeCheck = 1200;
 				ORGANIZATIONNAME = AlexislogS;
 				TargetAttributes = {
 					EAAA564D251FC09400260081 = {
@@ -138,9 +196,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EAAA5656251FC09400260081 /* ViewController.swift in Sources */,
+				EAFF15672521F63E000CFED3 /* VideosResponse.swift in Sources */,
+				EA6113892520A4C900E4BEAA /* NetworkManager.swift in Sources */,
+				EAAA5656251FC09400260081 /* FeedViewController.swift in Sources */,
+				EA6113912520B01300E4BEAA /* APIKey.swift in Sources */,
+				EA61138C2520A8B300E4BEAA /* DataFetcherManager.swift in Sources */,
 				EAAA5652251FC09400260081 /* AppDelegate.swift in Sources */,
 				EAAA5654251FC09400260081 /* SceneDelegate.swift in Sources */,
+				EA61137D25209FD900E4BEAA /* Constants.swift in Sources */,
+				EA6113862520A3C900E4BEAA /* Video.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -192,6 +256,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -216,7 +281,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.7;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -252,6 +317,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -270,7 +336,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.7;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -286,7 +352,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = UG5F626PKK;
-				INFOPLIST_FILE = YouTubeApp/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/YouTubeApp/Configuration/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -304,7 +370,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = UG5F626PKK;
-				INFOPLIST_FILE = YouTubeApp/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/YouTubeApp/Configuration/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
