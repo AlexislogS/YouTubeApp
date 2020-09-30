@@ -24,4 +24,18 @@ final class NetworkManager {
             }
         }.resume()
     }
+    
+    func requestThumbnail(for request: URLRequest,
+                          completion: @escaping (Result<Data, Error>) -> Void) {
+        session.dataTask(with: request) { (data, response, error) in
+            if let response = response,
+               (response as? HTTPURLResponse)?.statusCode == 200,
+               let imageData = data {
+                completion(.success(imageData))
+            } else if let networkError = error {
+                completion(.failure(networkError))
+                return
+            }
+        }.resume()
+    }
 }
