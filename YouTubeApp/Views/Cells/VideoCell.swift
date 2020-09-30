@@ -19,7 +19,7 @@ final class VideoCell: UICollectionViewListCell {
         let imageView = UIImageView(image: Image.cellPlaceholder)
         imageView.widthAnchor.constraint(equalTo: imageView.heightAnchor,
                                          multiplier: 1280/720).isActive = true
-        imageView.backgroundColor = .red
+        imageView.tintColor = .red
         return imageView
     }()
     

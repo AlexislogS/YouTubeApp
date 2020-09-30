@@ -22,6 +22,15 @@ final class FeedViewController: UIViewController {
         return collectionView
     }()
     
+    private let errorLabel: UILabel = {
+        let label = UILabel()
+        label.isHidden = true
+        label.text = "Please try again later"
+        label.textAlignment = .center
+        label.font = UIFont.systemFont(ofSize: 30, weight: .semibold)
+        return label
+    }()
+    
     private enum Section {
         case main
     }
@@ -61,7 +70,10 @@ final class FeedViewController: UIViewController {
                 self?.populate(with: videos)
                 self?.videosCollectionView.reloadData()
             case .failure(let error):
-                print(error.localizedDescription)
+                self?.videosCollectionView.isScrollEnabled = false
+                self?.errorLabel.isHidden = false
+                self?.showAlert(title: "Failed to get videos",
+                                message: error.localizedDescription)
             }
         }
     }
@@ -74,6 +86,7 @@ final class FeedViewController: UIViewController {
     }
     
     private func setupCollectionView() {
+        videosCollectionView.backgroundView = errorLabel
         videosCollectionView.delegate = self
         view.addSubview(videosCollectionView)
         videosCollectionView.fillSuperview()
@@ -88,6 +101,14 @@ final class FeedViewController: UIViewController {
                 collectionView.dequeueConfiguredReusableCell(using: registration, for: indexPath, item: video)
             }
         )
+    }
+    
+    private func showAlert(title: String, message: String) {
+        let alert = UIAlertController.init(title: title,
+                                           message: message,
+                                           preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "OK", style: .default))
+        present(alert, animated: true)
     }
     
 }
