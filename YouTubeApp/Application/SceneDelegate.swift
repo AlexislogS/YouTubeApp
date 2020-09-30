@@ -15,7 +15,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         guard let windowScene = (scene as? UIWindowScene) else { return }
         window = UIWindow(windowScene: windowScene)
-        window?.rootViewController = FeedViewController(dataFetcherManager: DataFetcherManager())
+        let feedVC = FeedViewController(dataFetcherManager: DataFetcherManager())
+        window?.rootViewController = UINavigationController(rootViewController: feedVC)
         window?.makeKeyAndVisible()
     }
 }

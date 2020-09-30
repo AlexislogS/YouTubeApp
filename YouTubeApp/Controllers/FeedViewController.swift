@@ -18,6 +18,7 @@ final class FeedViewController: UIViewController {
         let layout = UICollectionViewCompositionalLayout.list(using: config)
         let collectionView = UICollectionView(frame: .zero,
                                               collectionViewLayout: layout)
+        collectionView.backgroundColor = .systemBackground
         return collectionView
     }()
     
@@ -37,8 +38,20 @@ final class FeedViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .systemBackground
+        setupNavigationBar()
         setupCollectionView()
         getVideosData()
+    }
+    
+    private func setupNavigationBar() {
+        let navBarAppearance = UINavigationBarAppearance()
+        navBarAppearance.backgroundColor = .systemBackground
+        navBarAppearance.shadowColor = .systemBackground
+        navigationController?.navigationBar.standardAppearance = navBarAppearance
+        navigationController?.hidesBarsOnSwipe = true
+        let imageView = UIImageView(image: Image.youTubeTitle)
+        imageView.contentMode = .scaleAspectFit
+        navigationItem.titleView = imageView
     }
     
     private func getVideosData() {
@@ -61,18 +74,34 @@ final class FeedViewController: UIViewController {
     }
     
     private func setupCollectionView() {
-        
+        videosCollectionView.delegate = self
         view.addSubview(videosCollectionView)
         videosCollectionView.fillSuperview()
         
         let registration = UICollectionView.CellRegistration<VideoCell, Video> { (cell, _, video) in
-            cell.configure(with: video)
+            cell.dataFetcherManager = self.dataFetcherManager
+            cell.video = video
         }
         
-        dataSource = UICollectionViewDiffableDataSource<Section, Video>(collectionView: videosCollectionView, cellProvider: { (collectionView, indexPath, video) -> UICollectionViewCell? in
-            collectionView.dequeueConfiguredReusableCell(using: registration, for: indexPath, item: video)
-        })
+        dataSource = UICollectionViewDiffableDataSource<Section, Video>(
+            collectionView: videosCollectionView, cellProvider: { (collectionView, indexPath, video) in
+                collectionView.dequeueConfiguredReusableCell(using: registration, for: indexPath, item: video)
+            }
+        )
     }
     
 }
 
+extension FeedViewController: UICollectionViewDelegate {
+    
+    func collectionView(_ collectionView: UICollectionView,
+                        didSelectItemAt indexPath: IndexPath) {
+        let detailVC = DetailViewController()
+        let cell = collectionView.cellForItem(at: indexPath) as? VideoCell
+        if let video = cell?.video {
+            detailVC.video = video
+            present(detailVC, animated: true)
+            collectionView.deselectItem(at: indexPath, animated: true)
+        }
+    }
+}

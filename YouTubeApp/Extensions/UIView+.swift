@@ -10,24 +10,16 @@ import UIKit
 
 extension UIView {
     
-    func addSubviews(_ views: UIView...) {
-        views.forEach { addSubview($0) }
-    }
-    
-    func fillSuperview() {
+    func fillSuperview(with padding: CGFloat = 0) {
         translatesAutoresizingMaskIntoConstraints = false
         anchors(top: superview?.topAnchor,
                 leading: superview?.leadingAnchor,
                 trailing: superview?.trailingAnchor,
-                bottom: superview?.bottomAnchor)
-    }
-    
-    func fillSafeArea() {
-        translatesAutoresizingMaskIntoConstraints = false
-        anchors(top: superview?.topAnchor,
-                leading: superview?.leadingAnchor,
-                trailing: superview?.trailingAnchor,
-                bottom: superview?.bottomAnchor, padding: .init(top: 20, left: 20, bottom: 20, right: 20))
+                bottom: superview?.bottomAnchor,
+                padding: .init(top: padding,
+                               left: padding,
+                               bottom: padding,
+                               right: padding))
     }
     
     func anchors(top: NSLayoutYAxisAnchor? = nil,

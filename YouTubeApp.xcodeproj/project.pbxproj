@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		EA060D312524885500512BD7 /* VideoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA060D302524885500512BD7 /* VideoCell.swift */; };
 		EA060D3825249A9A00512BD7 /* Date+.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA060D3725249A9A00512BD7 /* Date+.swift */; };
+		EA060D3D2524B72600512BD7 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA060D3C2524B72600512BD7 /* DetailViewController.swift */; };
 		EA61137D25209FD900E4BEAA /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA61137C25209FD900E4BEAA /* Constants.swift */; };
 		EA6113862520A3C900E4BEAA /* Video.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA6113852520A3C900E4BEAA /* Video.swift */; };
 		EA6113892520A4C900E4BEAA /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA6113882520A4C900E4BEAA /* NetworkManager.swift */; };
@@ -25,6 +26,7 @@
 /* Begin PBXFileReference section */
 		EA060D302524885500512BD7 /* VideoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoCell.swift; sourceTree = "<group>"; };
 		EA060D3725249A9A00512BD7 /* Date+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+.swift"; sourceTree = "<group>"; };
+		EA060D3C2524B72600512BD7 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		EA61137C25209FD900E4BEAA /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		EA6113852520A3C900E4BEAA /* Video.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Video.swift; sourceTree = "<group>"; };
 		EA6113882520A4C900E4BEAA /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
@@ -71,6 +73,7 @@
 			isa = PBXGroup;
 			children = (
 				EAAA5655251FC09400260081 /* FeedViewController.swift */,
+				EA060D3C2524B72600512BD7 /* DetailViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -233,6 +236,7 @@
 				EA6113892520A4C900E4BEAA /* NetworkManager.swift in Sources */,
 				EAAA5656251FC09400260081 /* FeedViewController.swift in Sources */,
 				EA6113912520B01300E4BEAA /* APIKey.swift in Sources */,
+				EA060D3D2524B72600512BD7 /* DetailViewController.swift in Sources */,
 				EA61138C2520A8B300E4BEAA /* DataFetcherManager.swift in Sources */,
 				EAAA5652251FC09400260081 /* AppDelegate.swift in Sources */,
 				EA060D312524885500512BD7 /* VideoCell.swift in Sources */,
